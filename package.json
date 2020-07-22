@@ -14,8 +14,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "ffi-napi": "^2.4.3",
-    "ref-array": "^1.2.0",
+    "ffi-napi": "^3.0.1",
+    "ref-array-napi": "^1.2.1",
     "winreg": "^1.2.4"
   },
   "repository": {

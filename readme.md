@@ -1,5 +1,5 @@
 
-# Voicemeeter-remote
+# Voicemeeter-remote-potato-napi
 
 Voicemeeter-remote is a Node.js wrapper for the official voicemeeterRemote DLL available in the installation directory of [Voicemeeter][voicemeeter], [Voicemeeter banana][voicemeeter-banana], or [Voicemeeter potato][voicemeeter-potato]. More informations about the DLL is available [here](https://forum.vb-audio.com/viewtopic.php?f=8&t=346)
 
@@ -7,12 +7,12 @@ Voicemeeter-remote is a Node.js wrapper for the official voicemeeterRemote DLL a
 ### First install it
 
 ```sh
-$ npm i voicemeeter-remote-potato --save
+$ npm i voicemeeter-remote-potato-napi --save
 ```
 ### Then use it in your own program
 
 ```js
-const voicemeeter = require('voicemeeter-remote-potato');
+const voicemeeter = require('voicemeeter-remote-potato-napi');
 
 voicemeeter.init().then(()=>{
     voicemeeter.login();
@@ -64,7 +64,7 @@ Fork the project make your change then do a pull request.
 
 [`ffi-napi`][ffi] => Read and execute the VoicemeeterRemote DLL
 
-[`ref-array`][ref-array] => Create array (*pointer) for `ffi` to return string from the DLL
+[`ref-array-napi`][ref-array] => Create array (*pointer) for `ffi` to return string from the DLL
 
 [`winreg`][winreg] => Read the windows registery to find Voicemeeter installation folder and the DLL
 

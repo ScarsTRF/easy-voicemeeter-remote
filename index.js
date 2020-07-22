@@ -1,8 +1,7 @@
-const ref = require('ref');
 const ffi = require('ffi-napi');
 const Registry = require('winreg');
 
-const ArrayType = require('ref-array');
+const ArrayType = require('ref-array-napi');
 const CharArray = ArrayType('char');
 const LongArray = ArrayType('long');
 const FloatArray = ArrayType('float');
