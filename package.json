@@ -1,6 +1,6 @@
 {
-  "name": "voicemeeter-remote-potato",
-  "version": "0.1.0",
+  "name": "voicemeeter-remote-potato-napi",
+  "version": "0.1.1",
   "description": "A Node.js voicemeeter remote wrapper",
   "main": "index.js",
   "contributors": [
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/weeryan17/voicemeeter-remote.git"
+    "url": "https://github.com/DanielHands008/voicemeeter-remote-potato-napi.git"
   },
   "keywords": [
     "voicemeeter",
