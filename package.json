@@ -1,6 +1,6 @@
 {
   "name": "voicemeeter-remote-potato-napi",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Node.js voicemeeter remote wrapper",
   "main": "index.js",
   "contributors": [
