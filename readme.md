@@ -1,5 +1,5 @@
 
-# Voicemeeter-remote-potato-napi
+# easy-voicemeeter-remote
 
 Voicemeeter-remote is a Node.js wrapper for the official voicemeeterRemote DLL available in the installation directory of [Voicemeeter][voicemeeter], [Voicemeeter banana][voicemeeter-banana], or [Voicemeeter potato][voicemeeter-potato]. More informations about the DLL is available [here](https://forum.vb-audio.com/viewtopic.php?f=8&t=346)
 
@@ -12,7 +12,7 @@ $ npm i voicemeeter-remote-potato-napi --save
 ### Then use it in your own program
 
 ```js
-const voicemeeter = require('voicemeeter-remote-potato-napi');
+const voicemeeter = require('easy-voicemeeter-remote');
 
 voicemeeter.init().then(()=>{
     voicemeeter.login();
@@ -30,13 +30,49 @@ voicemeeter.login();
 voicemeeter.logout();
 ```
 
-  - Set all the parameters like : 'mono', 'solo', 'mute', 'gain', 'gate', 'comp' for each Strip and Bus
+  - Set parameters like : 'mono', 'solo', 'mute', 'gain', 'gate', 'comp' for each Strip and Bus
 ```js
 // Set the gain of the first Strip to -10db
 voicemeeter.setStripGain(0,-10);
 // Mute the second Bus
 voicemeeter.setBusMute(1,true);
 ```
+
+  - Get All available Parameters form all Strips and Buses. like : 'mono', 'solo', 'mute', 'gain', 'gate', 'comp' ...
+```js
+console.log('getAllParameter  || ', await voicemeeter.getAllParameter())
+```
+
+  - Get Multiple Parameters form Strips and Buses. like : 'mono', 'solo', 'mute', 'gain', 'gate', 'comp' ...
+```js
+// 
+var data = await voicemeeter.getMultiParameter([
+            { type: 'Strip', id: 0, getVals: ['mono', 'Mute', 'solo', 'gain'] },
+            { type: 'Bus', id: 0, getVals: ['Mono', 'mute', 'gain'] }
+        ])
+
+console.log('getMultiParameter  || ', data)
+
+//{ strips: [ { type: 'strip', id: 0, mono: 0, mute: 0, solo: 0, gain: -10 } ], buses: [{ type: 'bus', id: 0, mono: 0, mute: 0, gain: -18.614171981811523 }]}
+```
+
+   - Get Level by Strip or Bus ID
+   - Mode
+   - 0= pre fader input levels.
+   - 1= post fader input levels.
+	- 2= post Mute input levels.
+	- 3= output levels.
+   - index strip or bus id
+```js
+getLevelByID(mode, index)
+```
+
+   - Get Midi Data
+```js
+voicemeeter.getMidi()
+```
+
+
    - Get all input/output devices
 ```js
 // Get all devices from the DLL
@@ -48,29 +84,17 @@ console.log(voicemeeter.inputDevices)
 console.log(voicemeeter.outputDevices)
 ```
 
-# Todos
-- Parameters Getters
-- Stream Getters
-- 32bit compatibility
-- Implement all methods available in the DLL
-
-# Development
-
-Want to contribute? Great!
-
-Fork the project make your change then do a pull request.
 
 #### Dependencies
 
 [`ffi-napi`][ffi] => Read and execute the VoicemeeterRemote DLL
 
+[`ref-napi`][ref-napi] 
+
 [`ref-array-napi`][ref-array] => Create array (*pointer) for `ffi` to return string from the DLL
 
 [`winreg`][winreg] => Read the windows registery to find Voicemeeter installation folder and the DLL
 
-# Usage
-
-###### Make yours and send me the link
 
 ----
 # License
