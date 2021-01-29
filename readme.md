@@ -58,7 +58,7 @@ console.log("getMultiParameter  || ", data);
 buses: [{ type: 'bus', id: 0, mono: 0, mute: 0, gain: -18.614171981811523 }]} */
 ```
 
-### Get Current Level by ID
+### Get Current Level
 
 - Get Level by Strip or Bus ID
 - mode = 0= pre fader input levels. 1= post fader input levels. 2= post Mute input levels. 3= output levels.
