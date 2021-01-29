@@ -2,15 +2,13 @@
 
 Voicemeeter-remote is a Node.js wrapper for the official voicemeeterRemote DLL available in the installation directory of [Voicemeeter][voicemeeter], [Voicemeeter banana][voicemeeter-banana], or [Voicemeeter potato][voicemeeter-potato]. More informations about the DLL is available [here](https://forum.vb-audio.com/viewtopic.php?f=8&t=346)
 
-# How to use it ?
-
 ### First install it
 
 ```sh
 $ npm i easy-voicemeeter-remote --save
 ```
 
-### Then use it in your own program
+### How to use it ?
 
 ```js
 const voicemeeter = require("easy-voicemeeter-remote");
@@ -22,9 +20,7 @@ voicemeeter.init().then(() => {
 
 After the login method is successful you can use all the methods to interact with the instance of Voicemeeter
 
-### You can :
-
-- Connect and disconnect with the Voicemeeter software
+### Connect and disconnect with the Voicemeeter software
 
 ```js
 // Connect
@@ -33,7 +29,7 @@ voicemeeter.login();
 voicemeeter.logout();
 ```
 
-- Set parameters like : 'mono', 'solo', 'mute', 'gain', 'gate', 'comp' for each Strip and Bus
+### Set parameters like : 'mono', 'solo', 'mute', 'gain', 'gate', 'comp' for each Strip and Bus
 
 ```js
 // Set the gain of the first Strip to -10db
@@ -42,13 +38,13 @@ voicemeeter.setStripGain(0, -10);
 voicemeeter.setBusMute(1, true);
 ```
 
-- Get All available Parameters form all Strips and Buses. like : 'mono', 'solo', 'mute', 'gain', 'gate', 'comp' ...
+### Get All available Parameters form all Strips and Buses. like : 'mono', 'solo', 'mute', 'gain', 'gate', 'comp' ...
 
 ```js
 console.log("getAllParameter  || ", await voicemeeter.getAllParameter());
 ```
 
-- Get Multiple Parameters form Strips and Buses. like : 'mono', 'solo', 'mute', 'gain', 'gate', 'comp' ...
+### Get Multiple Parameters form Strips and Buses.
 
 ```js
 //
@@ -62,18 +58,19 @@ console.log("getMultiParameter  || ", data);
 //{ strips: [ { type: 'strip', id: 0, mono: 0, mute: 0, solo: 0, gain: -10 } ], buses: [{ type: 'bus', id: 0, mono: 0, mute: 0, gain: -18.614171981811523 }]}
 ```
 
+### Get Current Level by ID
+
 - Get Level by Strip or Bus ID
-- Mode
-- 0= pre fader input levels. 1= post fader input levels. 2= post Mute input levels. 3= output levels.
+- mode = 0= pre fader input levels. 1= post fader input levels. 2= post Mute input levels. 3= output levels.
 - index strip or bus id
 
 ```js
-getLevelByID(mode, index);
+voicemeeter.getLevelByID(mode, index);
 
 console.log("Level || ", voicemeeter.getLevelByID(3, 6));
 ```
 
-- Get Midi Data
+### Get Midi Data
 
 ```js
 voicemeeter.getMidi();
@@ -81,7 +78,7 @@ voicemeeter.getMidi();
 console.log("MIDI || ", voicemeeter.getMidi());
 ```
 
-- Get all input/output devices
+### Get all input/output devices
 
 ```js
 // Get all devices from the DLL
