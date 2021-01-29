@@ -1,28 +1,26 @@
 {
-  "name": "easy-voicemeeter-remote",
-  "version": "0.0.2",
-  "description": "A easy Node.js voicemeeter remote wrapper",
-  "main": "index.js",
-  "contributors": [
-    {
-      "name": "Steffen Reimann"
-    }
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "ffi-napi": "^3.1.0",
-    "ref-array-napi": "^1.2.1",
-    "ref-napi": "3.0.1",
-    "winreg": "^1.2.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/steffenreimann/easy-voicemeeter-remote.git"
-  },
-  "keywords": [
-    "voicemeeter",
-    "remote",
-    "dll",
-    "api"
-  ]
+    "name": "easy-voicemeeter-remote",
+    "version": "0.0.3",
+    "description": "A easy Node.js voicemeeter remote",
+    "main": "index.js",
+    "contributors": [{
+        "name": "Steffen Reimann"
+    }],
+    "license": "MIT",
+    "dependencies": {
+        "ffi-napi": "^3.1.0",
+        "ref-array-napi": "^1.2.1",
+        "ref-napi": "3.0.1",
+        "winreg": "^1.2.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/steffenreimann/easy-voicemeeter-remote.git"
+    },
+    "keywords": [
+        "voicemeeter",
+        "remote",
+        "dll",
+        "api"
+    ]
 }
