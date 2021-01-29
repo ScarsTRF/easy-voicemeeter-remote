@@ -5,7 +5,7 @@ Voicemeeter-remote is a Node.js wrapper for the official voicemeeterRemote DLL a
 ### First install it
 
 ```sh
-$ npm i easy-voicemeeter-remote --save
+npm install easy-voicemeeter-remote --save
 ```
 
 ### How to use it ?
@@ -47,7 +47,6 @@ console.log("getAllParameter  || ", await voicemeeter.getAllParameter());
 ### Get Multiple Parameters form Strips and Buses.
 
 ```js
-//
 var data = await voicemeeter.getMultiParameter([
   { type: "Strip", id: 0, getVals: ["mono", "Mute", "solo", "gain"] },
   { type: "Bus", id: 0, getVals: ["Mono", "mute", "gain"] },
@@ -55,7 +54,8 @@ var data = await voicemeeter.getMultiParameter([
 
 console.log("getMultiParameter  || ", data);
 
-//{ strips: [ { type: 'strip', id: 0, mono: 0, mute: 0, solo: 0, gain: -10 } ], buses: [{ type: 'bus', id: 0, mono: 0, mute: 0, gain: -18.614171981811523 }]}
+/* { strips: [ { type: 'strip', id: 0, mono: 0, mute: 0, solo: 0, gain: -10 } ], 
+buses: [{ type: 'bus', id: 0, mono: 0, mute: 0, gain: -18.614171981811523 }]} */
 ```
 
 ### Get Current Level by ID
