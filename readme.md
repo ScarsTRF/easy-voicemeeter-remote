@@ -97,13 +97,16 @@ console.log(voicemeeter.outputDevices);
 
 [`ffi-napi`][ffi] => Read and execute the VoicemeeterRemote DLL
 
-[`ref-napi`][ref-napi]
-
 [`ref-array-napi`][ref-array] => Create array (\*pointer) for `ffi` to return string from the DLL
 
 [`winreg`][winreg] => Read the windows registery to find Voicemeeter installation folder and the DLL
 
 ---
+
+Base [Mikatux/voicemeeter-remote]: https://github.com/Mikatux/voicemeeter-remote
+Forked [https://github.com/weeryan17/voicemeeter-remote]: https://github.com/weeryan17/voicemeeter-remote
+Forked [DanielHands008/voicemeeter-remote-potato-napi]: https://github.com/DanielHands008/voicemeeter-remote-potato-napi
+Forked This Repo [steffenreimann/easy-voicemeeter-remote]: https://github.com/steffenreimann/easy-voicemeeter-remote
 
 # License
 
