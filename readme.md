@@ -100,13 +100,13 @@ console.log(voicemeeter.outputDevices);
 
 ---
 
-#### Base [mikatux/voicemeeter-remote]: https://github.com/Mikatux/voicemeeter-remote
+#### Base [mikatux/voicemeeter-remote](https://github.com/Mikatux/voicemeeter-remote)
 
-#### [weeryan17/voicemeeter-remote]: https://github.com/weeryan17/voicemeeter-remote forked from [Mikatux/voicemeeter-remote]: https://github.com/Mikatux/voicemeeter-remote
+#### [weeryan17/voicemeeter-remote](https://github.com/weeryan17/voicemeeter-remote) forked from [Mikatux/voicemeeter-remote](https://github.com/Mikatux/voicemeeter-remote)
 
-#### [danielhands008/voicemeeter-remote-potato-napi]: https://github.com/DanielHands008/voicemeeter-remote-potato-napi forked from [weeryan17/voicemeeter-remote]: https://github.com/weeryan17/voicemeeter-remote
+#### [danielhands008/voicemeeter-remote-potato-napi](https://github.com/DanielHands008/voicemeeter-remote-potato-napi)forked from [weeryan17/voicemeeter-remote](https://github.com/weeryan17/voicemeeter-remote)
 
-#### [steffenreimann/easy-voicemeeter-remote]: https://github.com/steffenreimann/easy-voicemeeter-remote forked from [DanielHands008/voicemeeter-remote-potato-napi]: https://github.com/DanielHands008/voicemeeter-remote-potato-napi
+#### [steffenreimann/easy-voicemeeter-remote](https://github.com/steffenreimann/easy-voicemeeter-remote) forked from [DanielHands008/voicemeeter-remote-potato-napi](https://github.com/DanielHands008/voicemeeter-remote-potato-napi)
 
 # License
 
