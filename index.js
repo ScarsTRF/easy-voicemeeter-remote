@@ -347,8 +347,8 @@ const voicemeeter = {
 
 
 //Create setter function
-const parameterStripNames = ['mono', 'solo', 'mute', 'gain', 'gate', 'comp'];
-const parameterBusNames = ['mono', 'mute', 'gain'];
+const parameterStripNames = ['mono', 'solo', 'mute', 'gain', 'gate', 'comp', 'A1', 'A2', 'A3', 'A4', 'A5', 'B1', 'B2', 'B3'];
+const parameterBusNames = ['mono', 'mute', 'gain', 'A1', 'A2', 'A3', 'A4', 'A5', 'B1', 'B2', 'B3'];
 
 parameterBusNames.forEach(name => {
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
